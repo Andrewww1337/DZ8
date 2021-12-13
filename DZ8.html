@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DZ8</title>
+</head>
+<body>
+<script>
+//concat
+console.log('concat');
+const myConcat1 =['cat','dog','mouse']; 
+const myConcat2 =['frog','chicken','elephant'];
+const myConcat3 =['cow','sheep','pigeon'];
+const myConcatOb = myConcat1.concat(myConcat2,myConcat3);
+console.log(myConcatOb);
+
+
+//copyWithin
+console.log('copyWithin');
+
+var test = ['cat','dog','mouse','frog','chicken','elephant','cow','sheep','pigeon'];
+prow=test.copyWithin(1,5,8) // хочу заменить собаку,кота,лягушку.На слона,корову и овцу
+console.log(prow);
+
+
+//entries
+console.log('entries');
+
+let nez = ['cat','dog','mouse','frog','chicken','elephant','cow','sheep','pigeon'];
+let pricol = nez.entries();
+for (let otv of pricol){
+  console.log(otv); // нормально почитать!!!
+}
+
+//every
+console.log('every');
+
+var choto = [1,2,3,4,5,6,7,8,9];
+var ktoto = [2,3,4,5,6,7,8,9];
+function checkNum(zna){
+return zna > 1;
+}
+tyt=ktoto.every(checkNum);
+resh=choto.every(checkNum);
+console.log(resh);
+console.log(tyt);
+
+
+//fill
+console.log('fill');
+
+var kopysta = [1,2,3,4,5,'cow','sheep','pigeon'];
+function gog(kopysta){
+return kopysta.fill(true,2,6);
+}
+
+console.log(kopysta);
+console.log(kopysta.fill(true,2,6));
+
+// filter
+console.log('filter');
+
+var filtruem = [1,2,3,5,7,9,15,25,35,55,75,95];
+var otfiltrovali = filtruem.filter(
+  function filtrovka(bolshe_10) {
+    return bolshe_10 > 10;
+  }
+);
+console.log(filtruem);
+console.log(otfiltrovali);
+
+//find
+console.log('find');
+
+var bolche = [-2,3,-55,77];
+
+var ichem = bolche.find(
+  function naiti(pipipi){
+  return pipipi > 0;
+  }
+);
+console.log(bolche);
+console.log(ichem);
+
+
+//findindex
+console.log('findindex');
+
+
+var inenx = [1,2,3,4,5];
+var inani = [1,2,3,4,5];
+var nasind = inenx.findIndex(
+  function checkNumber( ravini ) {
+    return ravini == 3;
+  }
+);
+console.log(nasind);
+
+
+//flat
+console.log('flat');
+
+var flatti=[1,2,3,[4,5,[6,7]]];
+flactit = flatti.flat(Infinity);
+console.log(flactit);
+console.log(flatti);
+
+//flatmap
+console.log('flatmap');
+
+let flama = [1,2,3,4,5];
+fli=flama.flatMap(x=>[x*3]);
+console.log(fli);
+console.log(flama);
+
+let fflm = ["Привет, меня зовут Андрей и это не шутки"];
+filin= fflm.flatMap(x=> x.split("",4));
+console.log(filin);
+console.log(fflm);
+
+//forEach разобраться
+console.log('forEach');
+
+var bla = [10, 20, 30];
+var ssu = 0;
+bla.forEach(
+  function srs(vnu) {
+  ssu+=vnu;
+    console.log(vnu);
+}
+);
+console.log(ssu);
+
+// from
+console.log('from');
+
+let hih = ("book");
+let hyh = Array.from(hih);
+console.log(hyh);
+
+// includes
+
+console.log('includes');
+
+ var gyg = [1,2,3];
+ gtg=gyg.includes(1);
+ console.log(gtg);
+
+
+
+//indexof
+console.log('indexof');
+
+
+ var wew = [1,2,3];
+ rer=wew.indexOf(1);
+ console.log(rer);
+
+//isArray
+console.log('isArray');
+
+let fup = [1]
+let tit = Array.isArray(fup);
+console.log(tit);
+
+// join
+console.log('join');
+
+let ret = ['rol','pitch','yaw'];
+pet = ret.join();
+console.log(pet);
+
+//keys
+console.log('keys');
+
+let awa = [1,2,3];
+let iterator = awa.keys();
+
+console.log(iterator.next());
+console.log(iterator.next() );
+console.log(iterator.next() );
+console.log(iterator.next()) ;
+
+
+//lastIndexOf
+console.log('lastIndexOf');
+
+wfw = (ret.lastIndexOf('yaw'));
+console.log(wfw);
+
+//Arrayof
+console.log('Arrayof');
+
+let drf = Array.of(1,2,3);
+console.log(drf);
+
+//pop
+console.log('pop');
+
+console.log(ret);
+let popip = ret.pop();
+console.log(popip);
+console.log(ret);
+
+//push
+console.log('push');
+
+var seb = ret.push('кот','пес');
+console.log(ret);
+
+// reverse
+console.log('reverse');
+
+let fyn = ret.reverse();
+console.log(fyn);
+
+//Shift
+console.log('Shift');
+
+var sdi = ['кот','пес','попуг'];
+console.log(sdi);
+var gkl = sdi.shift();
+console.log (sdi);
+console.log(gkl);
+
+
+//slice
+console.log('slice');
+
+console.log(nez);
+hyl= nez.slice(1,5);
+console.log(hyl);
+
+//some
+console.log('some');
+
+console.log( inani)
+function checkchto (gnm){
+ return gnm >3;
+}
+var gcv=inani.some(checkchto);
+console.log(gcv);
+
+//sort
+console.log('sort');
+
+console.log(nez);
+var bmw = nez.sort();
+console.log(bmw);
+
+
+//splice
+console.log('splice');
+
+console.log(nez);
+var hnm = nez.splice(3,3, 'кот','пес','попуг');
+console.log(hnm);
+console.log(nez);
+
+
+//toLocaleString
+console.log('toLocaleString');
+
+var ghk = [12345];
+var gty = new Date(); //прикольная штука
+var hvb = [ghk, gty, nez]; 
+var any = hvb.toLocaleString();
+console.log(hvb);
+console.log(any);
+
+
+//toString
+console.log('toString');
+
+newght = nez.toString();
+console.log(newght);
+
+//unshift
+console.log('unshift');
+
+
+var ggl = [1,2,3,4,5];
+var ccl= ggl.unshift(-1,0);
+console.log(ccl);
+console.log(ggl);
+
+//values
+console.log('values');
+
+let nnf = ['b','o','o','k'];
+let anf = nnf.values();
+for (let asf of anf){
+console.log(asf);
+}
+
+
+</script>
+
+</body>
+</html>
